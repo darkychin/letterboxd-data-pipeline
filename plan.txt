@@ -1,0 +1,18 @@
+# Rough planning
+1. Pull data from kaggle
+2. merge them and clean them
+3. save each data into panda dataframee vs panda parquet
+  - raw data
+  - clean data (column formatting and data clearning)
+  - analytic table data
+3. create table of
+  - most busy acter and actresses in (get most recent 3 years) 2023,2022,2021
+  - top 5 directors
+  - most busy unsound hero (artist or something)
+  - apply star schema and medallion tables
+4. Draw the data into Jupiter notebook and generate it
+5. Benchmark everything and generate a report
+5. Start SAM cli installation and test locally on the POC
+6. Deploy to AWS and test its result
+7. cross check the report with the AWS resource usage
+8. make a linkedin post
