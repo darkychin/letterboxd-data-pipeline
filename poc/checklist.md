@@ -1,0 +1,26 @@
+## Data Pipeline POC Checklist
+
+- [x] **Extract Data**
+  - [x] Download data from [Kaggle - Letterboxd Movies Dataset](https://www.kaggle.com/datasets/gsimonx37/letterboxd/data) with Kaggle API
+  - [x] Save data into "/data/external"
+- [x] **Load Data**
+  - [x] Load data from "/data/external" to `panda dataframe`
+  - [x] Create **Medallion - Bronze Checkpoint**
+    - [x] Save loaded `panda dataframe` into "/data/bronze" in format parquet
+- [x] **Explore Data**
+  - [ ] *Bronze*
+    - [] ["/data/bronze/actors"]()
+    - [x] ["/data/bronze/countries"](./exploration/20251228-bronze-countries.ipynb)
+    - [x] ["/data/bronze/crew"](./exploration/20251224-bronze-crew.ipynb)
+    - [ ] ["/data/bronze/genres"]()
+    - [ ] ["/data/bronze/languages"](./exploration/20251228-bronze-themes.ipynb)
+    - [ ] ["/data/bronze/movies"](./exploration/20251228-bronze-countries.ipynb)
+    - [ ] ["/data/bronze/releases"](./exploration/20251228-bronze-themes.ipynb)
+    - [ ] ["/data/bronze/studios"](./exploration/20251228-bronze-themes.ipynb)
+    - [x] ["/data/bronze/themes"](./exploration/20251228-bronze-themes.ipynb)
+- [ ] **Transform Data**
+  - [ ] Clean bronze data
+  - [ ] Save data into "/data/silver" in format parquet
+- [ ] **Aggregate data**
+  - [ ] Aggregate data from "/data/silver" 
+- [ ] Visualize Data
