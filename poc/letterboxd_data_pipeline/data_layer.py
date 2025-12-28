@@ -1,5 +1,5 @@
 from os import listdir
-from .constants import DATA_LAYER_PATH
+from letterboxd_data_pipeline.constants import DATA_LAYER_PATH
 
 
 def validate_layer(layer: str):

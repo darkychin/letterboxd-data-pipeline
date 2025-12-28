@@ -1,7 +1,7 @@
 from os import listdir
 import pandas as pd
-from .constants import DATA_LAYER_PATH
-from .data_layer import get_file_list
+from letterboxd_data_pipeline.constants import DATA_LAYER_PATH
+from letterboxd_data_pipeline.data_layer import get_file_list
 
 DIRECTORY = DATA_LAYER_PATH.get("external")
 
