@@ -1,6 +1,7 @@
 KAGGLE_DATA = {
     "source": "gsimonx37/letterboxd",
-    "source2": "wardabilal/spotify-global-music-dataset-20092025",
+    # smaller data source for testing only
+    # "source": "wardabilal/spotify-global-music-dataset-20092025",
 }
 
 # medallion layer: https://www.databricks.com/glossary/medallion-architecture
