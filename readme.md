@@ -5,5 +5,6 @@
 - [Letterboxd Movies Dataset](https://www.kaggle.com/datasets/gsimonx37/letterboxd/data)
 - https://stackoverflow.com/questions/55934733/documentation-for-kaggle-api-within-python
 - https://technowhisp.com/kaggle-api-python-documentation/
+- [file structure references](https://cookiecutter-data-science.drivendata.org/)
 
 
