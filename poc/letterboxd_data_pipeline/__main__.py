@@ -16,7 +16,7 @@ import letterboxd_data_pipeline.settings as settings
 # Setup environment and configs for kaggle
 settings.init()
 
-import letterboxd_data_pipeline.extract.download_data as download_data
+import letterboxd_data_pipeline.extract_data.download_data as download_data
 from letterboxd_data_pipeline.load_data import load_files_from_layer
 from letterboxd_data_pipeline.explore_data import shallow_explore
 from letterboxd_data_pipeline.save_data import save_all_data
