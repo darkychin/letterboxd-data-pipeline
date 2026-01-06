@@ -1,4 +1,5 @@
 import pandas as pd
+from letterboxd_data_pipeline.constants import POSSIBLE_NA_LIST
 
 
 def shallow_explore(df):
@@ -34,3 +35,7 @@ def deep_explore_all(df):
     pd.set_option("display.max.columns", None)
     for data in df:
         deep_explore(df=df, name=data)
+
+
+def is_possible_na(series: pd.Series[str]):
+    return series.str.lower().isin(POSSIBLE_NA_LIST)

@@ -12,3 +12,6 @@ DATA_LAYER_PATH = {
     "silver": "../data/silver",
     "gold": "../data/gold",
 }
+
+# reference: https://stackoverflow.com/a/59802500/7939633
+POSSIBLE_NA_LIST = ["na", "null", "nan", "none"]
