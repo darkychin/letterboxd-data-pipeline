@@ -1,0 +1,16 @@
+[project]
+name = "letterboxd_data_pipeline"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyterlab>=4.5.1",
+    "pandas>=2.3.3",
+    "pyarrow>=22.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.1.0",
+]
