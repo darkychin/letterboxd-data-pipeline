@@ -21,6 +21,7 @@ packages = ["letterboxd_data_pipeline"]
 dev = [
     "ipykernel>=7.1.0",
     "jupyter>=1.1.1",
+    "pre-commit>=4.5.1",
 ]
 
 # reference https://github.com/astral-sh/uv/issues/11175#issuecomment-3704807960
