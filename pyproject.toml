@@ -1,0 +1,36 @@
+[project]
+name = "letterboxd-data-pipeline"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "dotenv>=0.9.9",
+    "kaggle>=1.8.3",
+    "pandas>=2.3.3",
+    "pyarrow>=22.0.0",
+]
+
+[tool.uv]
+package = true
+
+[tool.setuptools]
+packages = ["letterboxd_data_pipeline"]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.1.0",
+    "jupyter>=1.1.1",
+    "pre-commit>=4.5.1",
+]
+
+# reference https://github.com/astral-sh/uv/issues/11175#issuecomment-3704807960
+## [tool.uv.build-backend]
+## module-root = "."
+## module-name = []
+
+# https://codecut.ai/how-to-structure-a-data-science-project-for-readability-and-transparency-2/
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
