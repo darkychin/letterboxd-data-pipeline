@@ -1,0 +1,22 @@
+repos:
+  # https://codecut.ai/how-to-structure-a-data-science-project-for-readability-and-transparency-2/
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.14.11
+    hooks:
+      # Run the linter.
+      - id: ruff-check
+        types_or: [python, pyi]
+      # Run the formatter.
+      - id: ruff-format
+        types_or: [python, pyi]
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.15.0
+    hooks:
+      - id: mypy
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v4.11.3  # Replace with latest tag
+    hooks:
+      - id: commitizen
+      - id: commitizen-branch
+        stages: [pre-push]
