@@ -8,18 +8,20 @@
   - [x] Create **Medallion - Bronze Checkpoint**
     - [x] Save loaded `panda dataframe` into "/data/bronze" in format parquet
 - [x] **Explore Data**
-  - [ ] *Bronze*
-    - [] ["/data/bronze/actors"]()
+  - [x] *Bronze*
+    - [x] ["/data/bronze/actors"](./exploration/20251228-bronze-actors.ipynb)
     - [x] ["/data/bronze/countries"](./exploration/20251228-bronze-countries.ipynb)
     - [x] ["/data/bronze/crew"](./exploration/20251224-bronze-crew.ipynb)
-    - [ ] ["/data/bronze/genres"]()
-    - [ ] ["/data/bronze/languages"](./exploration/20251228-bronze-themes.ipynb)
-    - [ ] ["/data/bronze/movies"](./exploration/20251228-bronze-countries.ipynb)
-    - [ ] ["/data/bronze/releases"](./exploration/20251228-bronze-themes.ipynb)
-    - [ ] ["/data/bronze/studios"](./exploration/20251228-bronze-themes.ipynb)
+    - [x] ["/data/bronze/genres"](./exploration//20251228-bronze-genres.ipynb)
+    - [x] ["/data/bronze/languages"](./exploration/20251228-bronze-themes.ipynb)
+    - [x] ["/data/bronze/movies"](./exploration/20251228-bronze-movies.ipynb)
+    - [x] ["/data/bronze/releases"](./exploration/20260106-bronze-releases.ipynb)
+    - [x] ["/data/bronze/studios"](./exploration/20260106-bronze-studios.ipynb)
     - [x] ["/data/bronze/themes"](./exploration/20251228-bronze-themes.ipynb)
 - [ ] **Transform Data**
   - [ ] Clean bronze data
+    - [ ] Setup schema for each dataframe
+    - [ ] Save duplicates data in another
   - [ ] Save data into "/data/silver" in format parquet
 - [ ] **Aggregate data**
   - [ ] Aggregate data from "/data/silver" 
