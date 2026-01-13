@@ -42,7 +42,8 @@ def start():
 
 
 def __main__():
-    start()
+    # start()
+    print("hi")
 
 
 if __name__ == "__main__":
