@@ -6,11 +6,11 @@ KAGGLE_DATA = {
 
 # medallion layer: https://www.databricks.com/glossary/medallion-architecture
 DATA_LAYER_PATH = {
-    "root": "../data",
-    "external": "../data/external",
-    "bronze": "../data/bronze",
-    "silver": "../data/silver",
-    "gold": "../data/gold",
+    "root": "data",
+    "external": "data/external",
+    "bronze": "data/bronze",
+    "silver": "data/silver",
+    "gold": "data/gold",
 }
 
 # reference: https://stackoverflow.com/a/59802500/7939633
