@@ -9,15 +9,15 @@
     - [x] Save loaded `panda dataframe` into "/data/bronze" in format parquet
 - [x] **Explore Data**
   - [x] *Bronze*
-    - [x] ["/data/bronze/actors"](./exploration/20251228-bronze-actors.ipynb)
-    - [x] ["/data/bronze/countries"](./exploration/20251228-bronze-countries.ipynb)
-    - [x] ["/data/bronze/crew"](./exploration/20251224-bronze-crew.ipynb)
-    - [x] ["/data/bronze/genres"](./exploration//20251228-bronze-genres.ipynb)
-    - [x] ["/data/bronze/languages"](./exploration/20251228-bronze-themes.ipynb)
-    - [x] ["/data/bronze/movies"](./exploration/20251228-bronze-movies.ipynb)
-    - [x] ["/data/bronze/releases"](./exploration/20260106-bronze-releases.ipynb)
-    - [x] ["/data/bronze/studios"](./exploration/20260106-bronze-studios.ipynb)
-    - [x] ["/data/bronze/themes"](./exploration/20251228-bronze-themes.ipynb)
+    - [x] ["/data/bronze/actors"](../exploration/20251228-bronze-actors.ipynb)
+    - [x] ["/data/bronze/countries"](../exploration/20251228-bronze-countries.ipynb)
+    - [x] ["/data/bronze/crew"](../exploration/20251224-bronze-crew.ipynb)
+    - [x] ["/data/bronze/genres"](../exploration//20251228-bronze-genres.ipynb)
+    - [x] ["/data/bronze/languages"](../exploration/20251228-bronze-languages.ipynb)
+    - [x] ["/data/bronze/movies"](../exploration/20251228-bronze-movies.ipynb)
+    - [x] ["/data/bronze/releases"](../exploration/20260106-bronze-releases.ipynb)
+    - [x] ["/data/bronze/studios"](../exploration/20260106-bronze-studios.ipynb)
+    - [x] ["/data/bronze/themes"](../exploration/20251228-bronze-themes.ipynb)
 - [ ] **Transform Data**
   - [ ] Clean bronze data
     - [ ] Setup schema for each dataframe
