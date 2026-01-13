@@ -28,3 +28,9 @@ dev = [
 ## [tool.uv.build-backend]
 ## module-root = "."
 ## module-name = []
+
+# https://codecut.ai/how-to-structure-a-data-science-project-for-readability-and-transparency-2/
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
