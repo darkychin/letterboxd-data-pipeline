@@ -1,16 +1,3 @@
-# Setup working directory on run time for main.py to work correctly with project absolute import:
-# - https://stackoverflow.com/a/71057808/7939633
-# - https://towardsdatascience.com/how-to-fix-modulenotfounderror-and-importerror-248ce5b69b1c/
-# - https://stackoverflow.com/a/35273613/7939633
-# - https://stackoverflow.com/a/44486700/7939633
-import sys, os
-
-module_path = os.path.abspath(os.path.join(".."))
-
-if module_path not in sys.path:
-    # Set python system path to "/poc/"
-    sys.path.append(module_path)
-
 import letterboxd_data_pipeline.settings as settings
 
 # Setup environment and configs for kaggle
