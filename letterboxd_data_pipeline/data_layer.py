@@ -8,13 +8,13 @@ def validate_layer(layer: str):
     return True
 
 
-def get_file_path(layer: str) -> str:
+def get_file_path(layer: str) -> str | None:
     validate_layer(layer)
 
     return DATA_LAYER_PATH.get(layer)
 
 
-def get_file_list(layer: str) -> tuple[list[str], str]:
+def get_file_list(layer: str) -> tuple[list[str], str | None]:
     path = get_file_path(layer)
 
     return ([file for file in listdir(path)], path)
