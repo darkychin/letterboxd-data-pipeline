@@ -102,10 +102,10 @@ def load_files_from_layer(*, layer: str, file_list: list[str] = []):
     return df
 
 
-# def __main__():
-#     file_list = get_local_raw_file_list()
+def __main__():
+    file_list = get_local_raw_file_list()
 
-#     df = load_local_data(file_list=file_list)
+    df = load_local_data(file_list=file_list)
 
 
 # if __name__ == "__main__":

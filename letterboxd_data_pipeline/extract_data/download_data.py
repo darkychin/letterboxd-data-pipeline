@@ -1,5 +1,9 @@
 from kaggle import api as kaggle_api
-from letterboxd_data_pipeline.constants import KAGGLE_DATA, DATA_LAYER_PATH
+from letterboxd_data_pipeline.constants import (
+    KAGGLE_DATA,
+    DATA_LAYER_PATH,
+    EXTERNAL_TARGET_DATA_LIST,
+)
 from letterboxd_data_pipeline.utils import make_data_path
 
 DATA_SOURCE = KAGGLE_DATA.get("source")
@@ -20,10 +24,6 @@ def start():
     """
     make_data_path(EXTERNAL_DATA_PATH)
 
-    target_file_list = get_target_files(
-        kaggle_api.dataset_list_files(DATA_SOURCE).files
-    )
-
     print("Try to download data")
     print("...")
     try:
@@ -38,15 +38,9 @@ def start():
         print(f"Exception: {e}")
     else:
         print("Download successful!")
-        return target_file_list
-
-
-def __main__():
-    start()
-
-
-if __name__ == "__main__":
-    __main__()
+        # Use hard code list because `kaggle_api.dataset_list_files(DATA_SOURCE)` has a page limit of 10000000000 at `complexjson.loads`,
+        # and they include poster files
+        return EXTERNAL_TARGET_DATA_LIST
 
 
 # References
