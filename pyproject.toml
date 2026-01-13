@@ -10,3 +10,19 @@ dependencies = [
     "pandas>=2.3.3",
     "pyarrow>=22.0.0",
 ]
+
+[tool.uv]
+package = true
+
+[tool.setuptools]
+packages = ["letterboxd_data_pipeline"]
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+]
+
+# reference https://github.com/astral-sh/uv/issues/11175#issuecomment-3704807960
+## [tool.uv.build-backend]
+## module-root = "."
+## module-name = []
