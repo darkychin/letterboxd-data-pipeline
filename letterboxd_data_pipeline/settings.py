@@ -9,7 +9,8 @@ def __load_env():
     current_path = dirname(__file__)
     # print(current_path)
 
-    parent_path = str(Path(current_path).parents[0].parents[0])
+    # pyproject.toml treat letterboxd_data_pipeline as a package, so we only need to go up one level 
+    parent_path = str(Path(current_path).parents[0])
     print(parent_path)
 
     dotenv_path = join(parent_path, ".env")
