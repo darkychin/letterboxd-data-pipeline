@@ -1,6 +1,5 @@
 import pandas as pd
 from letterboxd_data_pipeline.utils import make_data_path
-from letterboxd_data_pipeline.constants import DATA_LAYER_PATH
 from letterboxd_data_pipeline.data_layer import get_file_path
 
 
@@ -9,11 +8,11 @@ def save_df(*, df: pd.DataFrame, layer: str, df_name: str):
         raise Exception("Dataframe name cannot be empty!")
 
     file_path = get_file_path(layer)
-    save_path = f"{file_path}/{df_name}"
+    save_path = f"{file_path}/{df_name}.parquet"
 
     make_data_path(file_path)
 
-    print(f"Saving dataframe {df_name} into {file_path}")
+    print(f"Saving dataframe {df_name} into {save_path}")
     df.to_parquet(save_path)
     print("Complete!")
 
