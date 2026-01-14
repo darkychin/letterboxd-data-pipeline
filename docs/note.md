@@ -8,3 +8,7 @@
 
 ## File Type
 - "movies.csv" vs "movies.parquet", parquet is around 32% smaller
+
+
+## How to utilize parquet
+https://medium.com/munchy-bytes/are-you-using-parquet-with-pandas-in-the-right-way-595c9ee7112
