@@ -54,7 +54,9 @@ def load_data_from_layer(layer: str, file_type="parquet", dtype=None):
     return df
 
 
-def load_files_from_layer(*, layer: str, file_list: list[str] = [], dtype: str | None):
+def load_files_from_layer(
+    *, layer: str, file_list: list[str] = [], dtype: str | None = None
+):
     """
     Docstring for load_files_from_layer
 
