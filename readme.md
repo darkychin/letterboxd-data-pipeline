@@ -1,17 +1,37 @@
+## How to run with Python
 
-## How to run
+### Prerequisite:
 
-### With Python
-Prerequisite:
 - uv
+- Kaggle account
+
+#### Step 1
+
+Fill in your kaggle username and api key into ".env.example", and rename it as ".env"
+
+```Dotenv
+# .env file
+KAGGLE_USERNAME=USERNAME
+KAGGLE_KEY=KEY
+```
+
+#### Step 2
 
 run entire end to end pipeline with comment below command
+
 ```bash
 #  at directory /letterboxd-data-pipeline
 uv run letterboxd_data_pipeline
 ```
 
-## Source
+## Progress
+You can checkout current progress [here](docs/checklist.md).
+
+## Data Source
+[letterboxd movie data]()
+
+## Learning Source
+
 - [Idea to set up a data pipeline project](https://www.reddit.com/r/dataengineering/comments/1j33t9e/comment/mfz8d0p/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
 - [How to Test Lambda Functions Locally and Deploy to AWS using AWS SAM](https://www.youtube.com/watch?v=6hQ5pJ5xqkU)
 - [Download Kaggle Datasets via API in Python](https://www.youtube.com/watch?v=hzcV0hDkfzs)
@@ -19,5 +39,3 @@ uv run letterboxd_data_pipeline
 - https://stackoverflow.com/questions/55934733/documentation-for-kaggle-api-within-python
 - https://technowhisp.com/kaggle-api-python-documentation/
 - [file structure references](https://cookiecutter-data-science.drivendata.org/)
-
-
