@@ -1,4 +1,4 @@
-## Data Pipeline POC Checklist
+# Data Pipeline POC Checklist
 
 - [x] **Extract Data**
   - [x] Download data from [Kaggle - Letterboxd Movies Dataset](https://www.kaggle.com/datasets/gsimonx37/letterboxd/data) with Kaggle API
@@ -7,22 +7,46 @@
   - [x] Load data from "/data/external" to `panda dataframe`
   - [x] Create **Medallion - Bronze Checkpoint**
     - [x] Save loaded `panda dataframe` into "/data/bronze" in format parquet
-- [x] **Explore Data**
-  - [x] *Bronze*
-    - [x] ["/data/bronze/actors"](../exploration/20251228-bronze-actors.ipynb)
-    - [x] ["/data/bronze/countries"](../exploration/20251228-bronze-countries.ipynb)
-    - [x] ["/data/bronze/crew"](../exploration/20251224-bronze-crew.ipynb)
-    - [x] ["/data/bronze/genres"](../exploration//20251228-bronze-genres.ipynb)
-    - [x] ["/data/bronze/languages"](../exploration/20251228-bronze-languages.ipynb)
-    - [x] ["/data/bronze/movies"](../exploration/20251228-bronze-movies.ipynb)
-    - [x] ["/data/bronze/releases"](../exploration/20260106-bronze-releases.ipynb)
-    - [x] ["/data/bronze/studios"](../exploration/20260106-bronze-studios.ipynb)
-    - [x] ["/data/bronze/themes"](../exploration/20251228-bronze-themes.ipynb)
-- [ ] **Transform Data**
-  - [ ] Clean bronze data
-    - [ ] Setup schema for each dataframe
+- [x] **Explore Data** (*Bronze*)
+  - [x] ["/data/bronze/actors"](../exploration/20251228-bronze-actors.ipynb)
+  - [x] ["/data/bronze/countries"](../exploration/20251228-bronze-countries.ipynb)
+  - [x] ["/data/bronze/crew"](../exploration/20251224-bronze-crew.ipynb)
+  - [x] ["/data/bronze/genres"](../exploration//20251228-bronze-genres.ipynb)
+  - [x] ["/data/bronze/languages"](../exploration/20251228-bronze-languages.ipynb)
+  - [x] ["/data/bronze/movies"](../exploration/20251228-bronze-movies.ipynb)
+  - [x] ["/data/bronze/releases"](../exploration/20260106-bronze-releases.ipynb)
+  - [x] ["/data/bronze/studios"](../exploration/20260106-bronze-studios.ipynb)
+  - [x] ["/data/bronze/themes"](../exploration/20251228-bronze-themes.ipynb)
+- [ ] **Transform Data** (*Silver*)
+  - [ ] Clean *Bronze* data
+    - [ ] Setup cleaning script for each dataframe
+      - [ ] actors
+      - [ ] contries
+      - [ ] crews
+      - [ ] genres
+      - [ ] languages
+      - [ ] movies
+        - [ ] how to clean datetime?
+      - [ ] releases
+      - [ ] studios
+      - [ ] themes
+    - [ ] Setup common cleaning script
+      - [ ] Rename df in plurals and append postfix
+      - [ ] Drop duplicates
+      - [ ] Archive duplicates and append prefix "duplicate_"
+    - [ ] Setup schema for each dataframe (drafted)
+      - [x] actors
+      - [x] countries
+      - [x] crews
+      - [x] genres
+      - [x] languages
+      - [x] movies
+      - [x] releases
+      - [x] studios
+      - [x] themes
     - [ ] Save duplicates data in another
-  - [ ] Save data into "/data/silver" in format parquet
+  - [ ] Save cleaned data into "/data/silver" in format parquet
 - [ ] **Aggregate data**
+  - [ ] *Gold*
   - [ ] Aggregate data from "/data/silver" 
 - [ ] Visualize Data
