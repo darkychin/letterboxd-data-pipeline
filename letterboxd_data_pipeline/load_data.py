@@ -32,7 +32,7 @@ def load_local_data(file_list):
     return df
 
 
-def load_data_from_layer(layer: str, file_type="parquet"):
+def load_data_from_layer(layer: str, file_type="parquet", dtype=None):
     (file_list, path) = get_file_list(layer)
 
     df: dict[str, pd.DataFrame | None] = {}
@@ -44,7 +44,7 @@ def load_data_from_layer(layer: str, file_type="parquet"):
         print(f"Loading: {read_path}")
 
         if file_type == "csv":
-            df[df_name] = pd.read_csv(read_path)
+            df[df_name] = pd.read_csv(read_path, dtype=dtype)
         else:
             df[df_name] = pd.read_parquet(read_path)
 
@@ -54,15 +54,17 @@ def load_data_from_layer(layer: str, file_type="parquet"):
     return df
 
 
-def load_files_from_layer(*, layer: str, file_list: list[str] = []):
+def load_files_from_layer(*, layer: str, file_list: list[str] = [], dtype: str | None):
     """
     Docstring for load_files_from_layer
-    
-    :param layer: data 
+
+    :param layer: data
     :type layer: str
     :param file_list: Description
     :type file_list: list[str]
-    
+    :param dtype: data type to force all column as
+    :type dtype: str | None
+
     * argument design reference: https://stackoverflow.com/a/75654179/7939633
     """
     (layer_file_list, path) = get_file_list(layer)
@@ -88,11 +90,14 @@ def load_files_from_layer(*, layer: str, file_list: list[str] = []):
         # todo add file name clean up to avoid invalid naming for dataframe dictionary
         (df_name, file_type) = (file.split(".") + [None])[:2]
 
+        if df_name is None:
+            raise Exception("Invalid file name!")
+
         read_path = f"{path}/{file}"
         print(f"Loading: {read_path}")
 
         if file_type == "csv":
-            df[df_name] = pd.read_csv(read_path)
+            df[df_name] = pd.read_csv(read_path, dtype=dtype)
         else:
             df[df_name] = pd.read_parquet(read_path)
 
@@ -100,13 +105,3 @@ def load_files_from_layer(*, layer: str, file_list: list[str] = []):
 
     print("Finish loading.")
     return df
-
-
-def __main__():
-    file_list = get_local_raw_file_list()
-
-    df = load_local_data(file_list=file_list)
-
-
-# if __name__ == "__main__":
-#     __main__()
