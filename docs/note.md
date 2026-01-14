@@ -7,4 +7,4 @@
 
 
 ## File Type
-- "movies.csv" vs "movies(parquet)", parquet is around 32% smaller
+- "movies.csv" vs "movies.parquet", parquet is around 32% smaller
