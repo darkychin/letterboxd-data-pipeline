@@ -5,7 +5,7 @@ Concluded schema from exploration
 SILVER_SCHEMA = {
     "actors": {"id": "int64", "name": "str", "role": "str"},
     "countries": {"id": "int64", "country": "category"},
-    "crews": {"id": "int64", "role": "category", "name": "object"},
+    "crews": {"id": "int64", "role": "category", "name": "str"},
     "genres": {"id": "int64", "genre": "category"},
     "languages": {"id": "int64", "type": "category", "language": "category"},
     "movies": {
