@@ -2,15 +2,13 @@
 
 A data pipeline demo using Kaggle data - Letterboxd Movies Dataset.
 
-## How to run
-
-### With Python
+## How to run with Python
 
 Prerequisite:
 
 - uv
 
-run entire end to end pipeline with comment below command
+run entire end to end pipeline with command below
 
 ```bash
 #  at directory /letterboxd-data-pipeline
