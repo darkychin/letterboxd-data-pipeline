@@ -19,16 +19,16 @@ def deep_explore(df: pd.DataFrame, name):
     print()
 
 
-def experimental_explore(raw_df: pd.DataFrame):
-    # non_number_minute = df[math.isnan(int(df["minute"]))]
+# def experimental_explore(raw_df: pd.DataFrame):
+#     # non_number_minute = df[math.isnan(int(df["minute"]))]
 
-    df = raw_df.copy()
-    na_minute = raw_df.copy()["minute"].isna()
-    clean_minute = raw_df.copy().dropna()
-    # print(clean_minute.head())
-    print(clean_minute.describe())
-    print(clean_minute.groupby("minute").count())
-    # print(non_number_minute.groupby("minute").count())
+#     df = raw_df.copy()
+#     na_minute = raw_df.copy()["minute"].isna()
+#     clean_minute = raw_df.copy().dropna()
+#     # print(clean_minute.head())
+#     print(clean_minute.describe())
+#     print(clean_minute.groupby("minute").count())
+#     # print(non_number_minute.groupby("minute").count())
 
 
 def deep_explore_all(df):
